@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The List</title>
+</head>
+<body>
+	{% for page in pages_list %}
+		<ul>
+			<li>
+				<h1><a href="{{ page.get_absolute_url }}">{{page.title}}</a></h1>
+			</li>
+			<li>
+				<p>{{page.content}}</p>
+			</li>
+			<li>
+				<p>{{page.last_update}}</p>
+			</li>
+		</ul><br>
+		<hr>
+	{% endfor %}
+</body>
+</html>
